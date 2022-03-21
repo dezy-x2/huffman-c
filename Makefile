@@ -1,3 +1,3 @@
 run:
-	@cc huffman.c
-	@./a.out
+	@cc huffman.c -o huffman
+	@./huffman
