@@ -3,10 +3,10 @@
  * @param freq (int) the frequency that the letter shows
  * @param c (char) the letter that the node stores
  */
-typedef struct letterNode {
+typedef struct LetterNode {
     int freq;
     char c;
-} letterNode;
+} LetterNode;
 
 /**
  * @brief node to hold a letter node along with its left and right tree nodes
@@ -14,11 +14,11 @@ typedef struct letterNode {
  * @param left (treeNode) the left side treeNode
  * @param right (treeNode) the right side treeNode
  */
-typedef struct treeNode {
-    letterNode* ln;
-    struct treeNode* left;
-    struct treeNode* right;
-} treeNode;
+typedef struct TreeNode {
+    LetterNode* ln;
+    struct TreeNode* left;
+    struct TreeNode* right;
+} TreeNode;
 
-void initializeLetterNode(letterNode* ln, int f, char c);
-void initializeTreeNode(treeNode* tn, letterNode* ln, treeNode* leftTn, treeNode* rightTn);
+void initializeLetterNode(LetterNode* ln, int f, char c);
+void initializeTreeNode(TreeNode* tn, LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn);

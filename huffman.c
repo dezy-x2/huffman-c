@@ -4,8 +4,8 @@
 
 int main() {
     printf("Hello World!\n");
-    letterNode aNode;
-    treeNode aTree;
+    LetterNode aNode;
+    TreeNode aTree;
     
     initializeLetterNode(&aNode, 8, 'a');
     initializeTreeNode(&aTree, &aNode, NULL, NULL);
@@ -18,7 +18,7 @@ int main() {
  * @param f (int) the frequency that this letter appears
  * @param c (char) the letter that this node is storing
  */
-void initializeLetterNode(letterNode* ln, int f, char c) {
+void initializeLetterNode(LetterNode* ln, int f, char c) {
     printf("Initializing letter node with %d freq and '%c' char\n", f,c);
     ln->freq = f;
     ln->c=c;
@@ -32,7 +32,7 @@ void initializeLetterNode(letterNode* ln, int f, char c) {
  * @param leftTn (treeNode) the left treeNode that it will be holding
  * @param rightTn (treeNode) the right treeNode that it will be holding
  */
-void initializeTreeNode(treeNode* tn, letterNode* ln, treeNode* leftTn, treeNode* rightTn) {
+void initializeTreeNode(TreeNode* tn, LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn) {
     printf("Initializing tree node for letter '%c'\n",ln->c);
     tn->ln = ln;
     tn->left = leftTn;
