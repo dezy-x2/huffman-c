@@ -19,3 +19,6 @@ typedef struct LinkedList {
     Node* pHeadNode;
     int numNodes;
 } LinkedList;
+
+Node* initializeNode(Node* nextNode, LetterNode* data);
+LinkedList* initializeLinkedList(Node* headNode);
