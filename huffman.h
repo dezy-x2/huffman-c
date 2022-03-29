@@ -20,5 +20,5 @@ typedef struct TreeNode {
     struct TreeNode* right;
 } TreeNode;
 
-void initializeLetterNode(LetterNode* ln, int f, char c);
-void initializeTreeNode(TreeNode* tn, LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn);
+LetterNode* initializeLetterNode(int f, char c);
+TreeNode* initializeTreeNode(LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn);
