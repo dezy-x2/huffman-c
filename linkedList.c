@@ -7,20 +7,29 @@ int main() {
     printf("Hello World\n");
 }
 
-Node* initializeNode(Node* nextNode, LetterNode* data) {
+Node* initializeNode(LetterNode* data) {
     Node* newNode = (Node*) calloc(1, sizeof(Node));
-    newNode -> pNext = nextNode;
     newNode -> pData = data;
     return newNode;
 }
 
-LinkedList* initializeLinkedList(Node* headNode) {
+LinkedList* initializeLinkedList() {
     LinkedList* newList = (LinkedList*) calloc(1, sizeof(LinkedList));
-    newList -> pHeadNode = headNode;
-    if (headNode != NULL) {
-        newList->numNodes = 1;
-    } else {
-        newList->numNodes = 0;
-    }
+    newList -> numNodes = 0;
     return newList;
 }
+
+void add(LinkedList* list, Node* newNode) {
+    if (list->pHeadNode == NULL) {
+        list->pHeadNode = newNode;
+    } else {
+        Node* curr = list->pHeadNode;
+        while(curr->pNext != NULL) {
+            curr = curr->pNext;
+        }
+        curr->pNext = newNode;
+    }
+}
+
+// addOrIncrement cannot be implemented until i figure out how to link files lmao
+// so give me a sec
