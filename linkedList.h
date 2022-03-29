@@ -20,5 +20,7 @@ typedef struct LinkedList {
     int numNodes;
 } LinkedList;
 
-Node* initializeNode(Node* nextNode, LetterNode* data);
-LinkedList* initializeLinkedList(Node* headNode);
+Node* initializeNode(LetterNode* data);
+LinkedList* initializeLinkedList();
+void add(LinkedList* list, Node* newNode);
+void addOrIncrement(LinkedList* list, char c);
