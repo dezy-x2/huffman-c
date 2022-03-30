@@ -1,5 +1,4 @@
 #include "huffman.h"
-#include "linkedList.h"
 
 int main() {
     printf("Hello World!\n");

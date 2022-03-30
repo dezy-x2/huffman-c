@@ -1,5 +1,6 @@
 run:
 	@echo "compilling..."
-	@cc huffman.c -o huffman
+	@cc -c huffman.c && cc -c linkedList.c
+	@cc -o huffman huffman.o linkedList.o
 	@echo "done compilling; executing..."
 	@./huffman
