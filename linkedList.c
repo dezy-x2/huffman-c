@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 #include "linkedList.h"
-
-int main() {
-    printf("Hello World\n");
-}
 
 Node* initializeNode(LetterNode* data) {
     Node* newNode = (Node*) calloc(1, sizeof(Node));
