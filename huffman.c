@@ -41,3 +41,7 @@ TreeNode* initializeTreeNode(LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn
     tn->right = rightTn;
     return tn;
 }
+
+void printLetterNode(LetterNode* ln) {
+    printf("LetterNode: {freq: %d, c: %c}\n", ln->freq, ln->c);
+}
