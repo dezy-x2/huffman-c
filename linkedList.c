@@ -32,6 +32,7 @@ void addOrIncrement(LinkedList* list, char c) {
         if (currNode->pData->c == c) {
             currNode->pData->freq++;
             foundChar = true;
+            break;
         } else {
             currNode = currNode->pNext;
         }
