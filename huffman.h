@@ -28,3 +28,4 @@ typedef struct TreeNode {
 
 LetterNode* initializeLetterNode(int f, char c);
 TreeNode* initializeTreeNode(LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn);
+void printLetterNode(LetterNode* ln);
