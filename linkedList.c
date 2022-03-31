@@ -22,6 +22,7 @@ void add(LinkedList* list, Node* newNode) {
         }
         curr->pNext = newNode;
     }
+    list->numNodes++;
 }
 
 void addOrIncrement(LinkedList* list, char c) {
