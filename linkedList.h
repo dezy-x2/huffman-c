@@ -29,3 +29,4 @@ Node* initializeNode(LetterNode* data);
 LinkedList* initializeLinkedList();
 void add(LinkedList* list, Node* newNode);
 void addOrIncrement(LinkedList* list, char c);
+void printList(LinkedList* list);
