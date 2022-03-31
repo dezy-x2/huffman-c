@@ -5,9 +5,15 @@ int main() {
     printf("Hello World!\n");
     
     
-    LetterNode* aNode = initializeLetterNode(8, 'a');
-    TreeNode* aTree = initializeTreeNode(aNode, NULL, NULL);
+    // LetterNode* aNode = initializeLetterNode(8, 'a');
+    // TreeNode* aTree = initializeTreeNode(aNode, NULL, NULL);
     LinkedList* list = initializeLinkedList();
+    addOrIncrement(list, 'a');
+    printList(list);
+    addOrIncrement(list, 'b');
+    printList(list);
+    addOrIncrement(list, 'a');
+    printList(list);
 }
 
 /**
