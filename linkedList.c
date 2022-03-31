@@ -43,7 +43,7 @@ void printList(LinkedList* list) {
     printf("length is: %d\n", list->numNodes);
     Node* currNode = list->pHeadNode;
     while(currNode) {
-        printLetterNode(currNode);
+        printLetterNode(currNode->pData);
         currNode = currNode->pNext;
     }
 }
