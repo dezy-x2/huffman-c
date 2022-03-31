@@ -24,5 +24,16 @@ void add(LinkedList* list, Node* newNode) {
     }
 }
 
-// addOrIncrement cannot be implemented until i figure out how to link files lmao
-// so give me a sec
+void addOrIncrement(LinkedList* list, char c) {
+    Node* currNode = list->pHeadNode;
+    bool foundChar = false;
+    while(currNode) {
+        if (currNode->pData->c == c) {
+            currNode->pData->freq++;
+            foundChar = true;
+        } else {
+            currNode = currNode->pNext;
+        }
+    }
+    if (!foundChar) add(list, initializeNode(initializeLetterNode(1, c)));
+}

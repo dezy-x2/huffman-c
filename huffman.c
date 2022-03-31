@@ -1,4 +1,5 @@
 #include "huffman.h"
+#include "linkedList.h"
 
 int main() {
     printf("Hello World!\n");
@@ -6,6 +7,7 @@ int main() {
     
     LetterNode* aNode = initializeLetterNode(8, 'a');
     TreeNode* aTree = initializeTreeNode(aNode, NULL, NULL);
+    LinkedList* list = initializeLinkedList();
 }
 
 /**

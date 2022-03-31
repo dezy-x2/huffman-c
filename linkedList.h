@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include "huffman.h"
 
+#pragma once
+
 /**
  * @brief the basic node that holds its next node and one letterNode
  * @param pNext - (Node*) the next node in the linkedlist

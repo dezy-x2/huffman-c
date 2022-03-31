@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+
+
+#pragma once
 /**
  * @brief node to hold the letter and its frequency count
  * @param freq (int) the frequency that the letter shows
