@@ -37,3 +37,12 @@ void addOrIncrement(LinkedList* list, char c) {
     }
     if (!foundChar) add(list, initializeNode(initializeLetterNode(1, c)));
 }
+
+void printList(LinkedList* list) {
+    printf("length is: %d\n", list->numNodes);
+    Node* currNode = list->pHeadNode;
+    while(currNode) {
+        printLetterNode(currNode);
+        currNode = currNode->pNext;
+    }
+}
