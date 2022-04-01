@@ -30,5 +30,5 @@ LinkedList* initializeLinkedList();
 void add(LinkedList* list, Node* newNode);
 void addOrIncrement(LinkedList* list, char c);
 void printList(LinkedList* list);
-// need to add a swap function
 Node* get(LinkedList* list, int pos);
+void swap(LinkedList* list, Node* node1, Node* node2);
