@@ -33,3 +33,4 @@ void printList(LinkedList* list);
 Node* get(LinkedList* list, int pos);
 void swap(LinkedList* list, Node* node1, Node* node2); // leaving this here for now but idk if ill implement
 void replace(LinkedList* list, int pos, Node* newNode);
+void bubbleSort(LinkedList* list);
