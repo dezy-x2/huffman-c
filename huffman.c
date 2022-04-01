@@ -8,11 +8,10 @@ int main() {
     // LetterNode* aNode = initializeLetterNode(8, 'a');
     // TreeNode* aTree = initializeTreeNode(aNode, NULL, NULL);
     LinkedList* list = initializeLinkedList();
-    addOrIncrement(list, 'a');
-    printList(list);
-    addOrIncrement(list, 'b');
-    printList(list);
-    addOrIncrement(list, 'a');
+    char* newStr = "Hello, World!";
+    for(int i=0; i<13; i++) {
+        addOrIncrement(list, newStr[i]);
+    }
     printList(list);
 }
 
