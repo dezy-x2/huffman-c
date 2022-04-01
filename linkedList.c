@@ -52,12 +52,38 @@ void printList(LinkedList* list) {
 Node* get(LinkedList* list, int pos) {
     Node* curr = list->pHeadNode;
     int count = 0;
+    printf("\nRUNNING GET\n");
     while(curr != NULL) {
         if (count == pos) return curr;
         curr = curr->pNext;
         count++;
     }
     return NULL;
+}
+
+void swap(LinkedList* list, Node* node1, Node* node2) {
+    Node* node1Prev = get(list, idxOf(list, node1)-1);
+    Node* node1Next = node1->pNext;
+    Node* node2Prev = get(list, idxOf(list, node2)-1);
+    Node* node2Next = node2->pNext;
+    printf("\nRUNNING SWAP\n");
+    if(node1Prev == NULL) {
+        list->pHeadNode = node2;
+        node2->pNext = node1Next;
+        node2Prev->pNext = node1;
+        node1->pNext = node2Next;
+    } else if(node2Prev == NULL) {
+        list->pHeadNode = node1;
+        node1->pNext = node2Next;
+        node1Prev->pNext = node2;
+        node2->pNext = node1Next;
+    } else {
+        node1Prev->pNext = node2;
+        node2->pNext = node1Next;
+        node2Prev->pNext = node1;
+        node1->pNext = node2Next;
+    }
+    
 }
 
 void replace(LinkedList* list, int pos, Node* newNode) {
@@ -80,12 +106,14 @@ void bubbleSort(LinkedList* list) {
 
 int idxOf(LinkedList* list, Node* target) {
     Node* curr = list->pHeadNode;
-    count = 0;
+    int count = 0;
+    printf("\nRUNNING IDXOF\n");
     while(curr != NULL) {
         if (target == curr) {
             return count;
         }
         count++;
+        curr = curr->pNext;
     }
     return -1;
 }
