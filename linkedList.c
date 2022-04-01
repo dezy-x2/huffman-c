@@ -59,3 +59,10 @@ Node* get(LinkedList* list, int pos) {
     }
     return NULL;
 }
+
+void replace(LinkedList* list, int pos, Node* newNode) {
+    Node* prevNode = get(list, pos-1);
+    Node* oldNode = get(list, pos);
+    newNode->pNext = oldNode->pNext;
+    prevNode->pNext = newNode;
+}
