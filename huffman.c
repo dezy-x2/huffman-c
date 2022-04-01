@@ -13,6 +13,10 @@ int main() {
         addOrIncrement(list, newStr[i]);
     }
     printList(list);
+    Node* tryThisOne = list->pHeadNode;
+    Node* tryThisTwo = list->pHeadNode->pNext->pNext->pNext->pNext;
+    swap(list, tryThisOne, tryThisTwo);
+    printList(list);
 }
 
 /**
