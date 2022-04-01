@@ -87,6 +87,12 @@ void swap(LinkedList* list, Node* node1, Node* node2) {
 }
 
 void replace(LinkedList* list, int pos, Node* newNode) {
+    if (pos == 0) {
+        Node* elm1 = list->pHeadNode->pNext;
+        list->pHeadNode = newNode;
+        newNode->pNext = elm1;
+        return;
+    }
     Node* prevNode = get(list, pos-1);
     Node* oldNode = get(list, pos);
     newNode->pNext = oldNode->pNext;
