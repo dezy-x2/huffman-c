@@ -48,3 +48,14 @@ void printList(LinkedList* list) {
         currNode = currNode->pNext;
     }
 }
+
+Node* get(LinkedList* list, int pos) {
+    Node* curr = list->pHeadNode;
+    int count = 0;
+    while(curr != NULL) {
+        if (count == pos) return curr;
+        curr = curr->pNext;
+        count++;
+    }
+    return NULL;
+}
