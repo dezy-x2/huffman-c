@@ -66,3 +66,26 @@ void replace(LinkedList* list, int pos, Node* newNode) {
     newNode->pNext = oldNode->pNext;
     prevNode->pNext = newNode;
 }
+
+// still working on this
+void bubbleSort(LinkedList* list) {
+    Node* curr = list->pHeadNode;
+    Node* nextCurr = list->pHeadNode->pNext;
+    while(curr != NULL) {
+        if(curr->pData->freq < nextCurr->pData->freq) {
+            
+        }
+    }
+}
+
+int idxOf(LinkedList* list, Node* target) {
+    Node* curr = list->pHeadNode;
+    count = 0;
+    while(curr != NULL) {
+        if (target == curr) {
+            return count;
+        }
+        count++;
+    }
+    return -1;
+}
