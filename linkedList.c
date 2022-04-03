@@ -101,11 +101,16 @@ void replace(LinkedList* list, int pos, Node* newNode) {
 
 // still working on this
 void bubbleSort(LinkedList* list) {
-    Node* curr = list->pHeadNode;
-    Node* nextCurr = list->pHeadNode->pNext;
-    while(curr != NULL) {
-        if(curr->pData->freq < nextCurr->pData->freq) {
-            
+    bool wasSorted = true;
+    while(wasSorted) {
+        wasSorted = false;
+        Node* curr = list->pHeadNode;
+        Node* nextCurr = list->pHeadNode->pNext;
+        while(nextCurr != NULL) {
+            if(curr->pData->freq < nextCurr->pData->freq) {
+                swap(list, curr, nextCurr);
+                wasSorted = true;
+            }
         }
     }
 }
