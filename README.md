@@ -6,7 +6,7 @@ I'm trying to make the Huffman Lossless Compression Algorithm in C. This is my f
 
 ### LATEST UPDATE!
 
-As of Apr 1, 2022 the algorithm can go over a string and place it in a linkedList. If it encounters a letter n times it will mark its frequency as n!! this is a major part of the Huffman algo so now I need to place it all in a tree based on frequency and then thats pretty much it!
+New stuff as of Apr 5, 2022. The bubble sort algorithm now works so now the linked list can be sorted by the char frequency. This will allow us to much more easily add the nodes to a tree. This is going very well right now I'm happy with what we have.
 **Pretty lit**
 
 -Daniel
