@@ -113,3 +113,15 @@ int idxOf(LinkedList* list, Node* target) {
     }
     return -1;
 }
+
+Node* pop(LinkedList* list) {
+    if (list->pHeadNode == NULL) return NULL;
+    Node* curr = list->pHeadNode;
+    Node* prev = NULL;
+    while(curr != NULL) {
+        curr = curr->pNext;
+        prev = curr;
+    }
+    prev->pNext = NULL;
+    return curr;
+}
