@@ -90,7 +90,7 @@ void bubbleSort(LinkedList* list) {
         Node* curr = list->pHeadNode;
         Node* nextCurr = list->pHeadNode->pNext;
         while(nextCurr != NULL) {
-            if(curr->pData->freq < nextCurr->pData->freq) {
+            if(curr->pData->freq > nextCurr->pData->freq) {
                 swap(list, curr, nextCurr);
                 wasSorted = true;
             }
@@ -114,14 +114,10 @@ int idxOf(LinkedList* list, Node* target) {
     return -1;
 }
 
-Node* pop(LinkedList* list) {
-    if (list->pHeadNode == NULL) return NULL;
-    Node* curr = list->pHeadNode;
-    Node* prev = NULL;
-    while(curr != NULL) {
-        curr = curr->pNext;
-        prev = curr;
-    }
-    prev->pNext = NULL;
-    return curr;
+Node* grab(LinkedList* list) {
+    Node* target = list->pHeadNode;
+    Node* second = list->pHeadNode->pNext;
+    list->pHeadNode = second;
+    list->numNodes--;
+    return target;
 }
