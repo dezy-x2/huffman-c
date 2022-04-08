@@ -27,5 +27,5 @@ typedef struct TreeNode {
 } TreeNode;
 
 LetterNode* initializeLetterNode(int f, char c);
-TreeNode* initializeTreeNode(LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn);
+TreeNode* initializeTreeNode(LetterNode* ln);
 void printLetterNode(LetterNode* ln);

@@ -25,7 +25,6 @@ int main() {
 /**
  * @brief initializes a letterNode
  * 
- * @param ln (letterNode) the letterNode that is being initialized
  * @param f (int) the frequency that this letter appears
  * @param c (char) the letter that this node is storing
  */
@@ -40,17 +39,14 @@ LetterNode* initializeLetterNode(int f, char c) {
 /**
  * @brief initializes a treeNode
  * 
- * @param tn (treeNode) the treeNode that is being initialized
  * @param ln (letterNode) the letterNode that it is storing
- * @param leftTn (treeNode) the left treeNode that it will be holding
- * @param rightTn (treeNode) the right treeNode that it will be holding
  */
-TreeNode* initializeTreeNode(LetterNode* ln, TreeNode* leftTn, TreeNode* rightTn) {
+TreeNode* initializeTreeNode(LetterNode* ln) {
     printf("Initializing tree node for letter '%c'\n",ln->c);
     TreeNode* tn = (TreeNode*) calloc(1, sizeof(TreeNode));
     tn->ln = ln;
-    tn->left = leftTn;
-    tn->right = rightTn;
+    tn->left = NULL;
+    tn->right = NULL;
     return tn;
 }
 
