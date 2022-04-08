@@ -15,6 +15,11 @@ int main() {
     printList(list);
     bubbleSort(list);
     printList(list);
+    Node* grabbed = grab(list);
+    printf("\n\n");
+    printList(list);
+    printf("\n");
+    printLetterNode(grabbed->pData);
 }
 
 /**
