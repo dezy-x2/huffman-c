@@ -35,4 +35,4 @@ void swap(LinkedList* list, Node* node1, Node* node2);
 void replace(LinkedList* list, int pos, Node* newNode);
 void bubbleSort(LinkedList* list);
 int idxOf(LinkedList* list, Node* target);
-Node* pop(LinkedList* list);
+Node* grab(LinkedList* list);
