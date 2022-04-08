@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
+#include <linkedList.h>
 
 #pragma once
 /**
@@ -29,3 +29,4 @@ typedef struct TreeNode {
 LetterNode* initializeLetterNode(int f, char c);
 TreeNode* initializeTreeNode(LetterNode* ln);
 void printLetterNode(LetterNode* ln);
+TreeNode* createTree(LinkedList* list);
