@@ -143,7 +143,7 @@ void bubbleSort(LinkedList* list) {
         Node* curr = list->pHeadNode;
         Node* nextCurr = list->pHeadNode->pNext;
         while(nextCurr != NULL) {
-            if(curr->pData->freq > nextCurr->pData->freq) {
+            if(curr->pData->freq < nextCurr->pData->freq) {
                 swap(list, curr, nextCurr);
                 wasSorted = true;
             }
